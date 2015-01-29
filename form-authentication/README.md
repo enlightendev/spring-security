@@ -1,6 +1,6 @@
 ##About
 
-Showing form based authentication
+Showing form based authentication with angular front end
 
 
 ##

@@ -14,8 +14,8 @@
     <url>http://www.enlightendev.io</url>
 
     <modules>
-
-        <module>basic-security</module>
+        <module>basic-authentication</module>
+        <module>form-authentication</module>
     </modules>
 
     <developers>

@@ -8,11 +8,11 @@ import org.springframework.context.ConfigurableApplicationContext;
  *
  */
 @SpringBootApplication
-public class MainApp {
+public class CustomFormAuthenticationApplication {
 
     public static void main(String[] args) throws Exception {
 
-        ConfigurableApplicationContext context = SpringApplication.run(MainApp.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(CustomFormAuthenticationApplication.class, args);
 
     }
 }

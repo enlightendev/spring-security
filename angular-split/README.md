@@ -15,3 +15,7 @@ hosted by another separate process.
 - resource/api server
     - the resource server must be configured to allow CORS since client is on separate process.
     - the resource server in this case is not protecting the api.
+
+
+
+TODO: protect resource server using tokens.

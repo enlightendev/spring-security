@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class AppMain {
+public class OAuth2RestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AppMain.class, args);
+        SpringApplication.run(OAuth2RestApplication.class, args);
     }
 }

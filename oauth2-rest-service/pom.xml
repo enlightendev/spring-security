@@ -19,7 +19,7 @@
     </parent>
 
     <properties>
-        <start-class>com.enlightendev.spring.security.oauth.ex1.AppMain</start-class>
+        <start-class>com.enlightendev.spring.security.oauth.ex1.OAuth2RestApplication</start-class>
         <spring-security-oauth2.version>2.0.5.RELEASE</spring-security-oauth2.version>
     </properties>
 

@@ -2,6 +2,8 @@ package com.enlightendev.spring.security.angular.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -13,6 +15,7 @@ import java.io.IOException;
  * http://stackoverflow.com/questions/22846309/cors-filter-not-working-as-intended
  */
 @Component
+@Order(Ordered.HIGHEST_PRECEDENCE)
 public class SimpleCORSFilter implements Filter {
 
     private final static Logger log = LoggerFactory.getLogger(SimpleCORSFilter.class);

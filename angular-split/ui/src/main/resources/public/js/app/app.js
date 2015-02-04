@@ -45,19 +45,19 @@ angular.module('MainApp', ['ngRoute'])
             }).success(function (data) {
                 authenticate(function () {
                     if ($rootScope.authenticated) {
-                        console.log("Login succeeded")
+                        console.log("Login succeeded");
                         $location.path("/");
                         $scope.error = false;
                         $rootScope.authenticated = true;
                     } else {
-                        console.log("Login failed with redirect")
+                        console.log("Login failed with redirect");
                         $location.path("/login");
                         $scope.error = true;
                         $rootScope.authenticated = false;
                     }
                 });
             }).error(function (data) {
-                console.log("Login failed")
+                console.log("Login failed");
                 $location.path("/login");
                 $scope.error = true;
                 $rootScope.authenticated = false;
@@ -69,7 +69,7 @@ angular.module('MainApp', ['ngRoute'])
                 $rootScope.authenticated = false;
                 $location.path("/");
             }).error(function (data) {
-                console.log("Logout failed")
+                console.log("Logout failed");
                 $rootScope.authenticated = false;
             });
         }
@@ -78,10 +78,16 @@ angular.module('MainApp', ['ngRoute'])
 
     .controller('home', function ($scope, $http) {
 
-        /**
-         * this call
-         */
-        $http.get('http://localhost:9000').success(function (data) {
-            $scope.greeting = data;
-        })
+        var getgreeting = function(){
+
+            $http.get('http://localhost:9000').success(function (data) {
+                $scope.greeting = data;
+            });
+
+        };
+
+        if($scope.authenticated){
+            getgreeting();
+        }
+
     });

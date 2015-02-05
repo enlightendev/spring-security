@@ -73,21 +73,16 @@ angular.module('MainApp', ['ngRoute'])
                 $rootScope.authenticated = false;
             });
         }
-
     })
 
     .controller('home', function ($scope, $http) {
 
-        var getgreeting = function(){
+        if($scope.authenticated){
 
             $http.get('http://localhost:9000').success(function (data) {
                 $scope.greeting = data;
             });
 
         };
-
-        if($scope.authenticated){
-            getgreeting();
-        }
 
     });

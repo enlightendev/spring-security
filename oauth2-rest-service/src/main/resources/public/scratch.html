@@ -1,0 +1,45 @@
+{{user}}
+
+<div>
+  <p><a href="#" data-url="http://localhost:8080/api/user" onclick="$('#txtUrl').val($(this).data('url'))">user</a></p>
+  <p><a href="#" data-url="http://localhost:8080/api/applications" onclick="$('#txtUrl').val($(this).data('url'))">applications</a></p>
+  <p><a href="#" data-url="http://localhost:8080/api/employees" onclick="$('#txtUrl').val($(this).data('url'))">employees</a></p>
+  <input type="text" id="txtUrl">
+  <input type="text" id="txtToken">
+  <button id="btn">Make Request</button>
+</div>
+<h4>Response:</h4>
+<div class="response-headers">
+  <div>
+    <p class="greeting-id"></p>
+    <p class="greeting-content"></p>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+
+    var makecall = function makeCall(){
+
+      var url = $('#txtUrl').val();
+      var token = $('#txtToken').val();
+
+      $.ajax({
+        url: url,
+        headers: {
+          "Authorization": "Bearer " + token
+        },
+        //type: 'POST',
+        crossDomain: true
+      }).then(function(data, status, jqxhr) {
+        $('.greeting-id').append(data);
+        $('.greeting-content').append(data.content);
+        console.log(jqxhr);
+      });
+    };
+
+    $('#btn').on('click',function(){
+      makecall();
+    });
+  });
+</script>

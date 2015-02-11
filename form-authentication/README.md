@@ -13,14 +13,15 @@ methods to implement our particular requirements.
 
 - form login
 http://docs.spring.io/autorepo/docs/spring-security/4.0.0.M1/apidocs/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#formLogin()
+
 - logout
 http://docs.spring.io/autorepo/docs/spring-security/4.0.0.M1/apidocs/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#logout()
 
 
 ## Users
 
-This application does not override the default user store created by
-including <artifactId>spring-boot-starter-security</artifactId>. Thus we configure the only user using application.yml
+This application does not override the default user store created by including <artifactId>spring-boot-starter-security</artifactId>.
+Thus we have only one user configured using application.yml
 
 
 ## Angular

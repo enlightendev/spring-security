@@ -20,7 +20,7 @@ angular.module('MainApp', ['ngRoute'])
 
         var authenticate = function (callback) {
 
-            $http.get('user').success(function (data) {
+            $http.get('/api/user').success(function (data) {
                 if (data.name) {
                     $rootScope.authenticated = true;
                 } else {
@@ -76,12 +76,16 @@ angular.module('MainApp', ['ngRoute'])
 
     })
 
-    .controller('home', function ($scope, $http) {
+    .controller('home', function ($rootScope, $scope, $http) {
 
         /**
          * this call
          */
-        $http.get('/resource/').success(function (data) {
-            $scope.greeting = data;
-        })
+        if($rootScope.authenticated){
+
+            $http.get('/api/resource/').success(function (data) {
+                $scope.greeting = data;
+            });
+
+        };
     });

@@ -3,7 +3,8 @@
 Shows a sample single page application (in angular) served by its own server process and authenticates
 against its own server.
 
-Upon successful login a request is made to a resource server that acts as an api server hosted by another separate process.
+Upon successful login a request is made to a resource server that acts as an api server hosted by another
+separate process.
 
 NOTE:
 web user is authenticating against front end server application, not against back end. Once user is
@@ -41,6 +42,6 @@ or UserController class,etc
     - the resource server must be configured to allow CORS since client is on separate process.
     - the resource server in this case is not protecting the api.
 
-
-
-TODO: protect resource server using tokens.
+TODO:
+    - protect resource server using tokens.
+    - have front end be completely dumb: authenticate against back end, etc

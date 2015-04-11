@@ -14,7 +14,7 @@
     </appender>
 
     <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>c:/tmp/spring-oauth.log</File>
+        <File>/tmp/spring-oauth.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
             <FileNamePattern>rest-demo.%d{yyyy-MM-dd}.txt</FileNamePattern>
@@ -35,7 +35,7 @@
     <appender name="minuteRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover every minute -->
-            <FileNamePattern>c:/tmp/minutes/spring-oauth-minute.%d{yyyy-MM-dd_HH-mm}.txt</FileNamePattern>
+            <FileNamePattern>/tmp/minutes/spring-oauth-minute.%d{yyyy-MM-dd_HH-mm}.txt</FileNamePattern>
 
             <!-- keep 30 minutes' worth of history -->
             <maxHistory>30</maxHistory>

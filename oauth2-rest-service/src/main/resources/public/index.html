@@ -7,12 +7,8 @@
     <title>Basic Security</title>
     <link rel="stylesheet" href="./bootstrap-3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./bootstrap-3-dist/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- GOOGLE FONT -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
-    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -20,7 +16,7 @@
     <div ng-controller="navigation" class="container">
         <ul class="nav nav-pills" role="tablist">
             <li ng-class="{active:tab('home')}"><a href="#/">home</a></li>
-            <li><a href="#/login">login</a></li>
+            <li ng-show="!authenticated"><a href="#/login">login</a></li>
             <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
         </ul>
     </div>

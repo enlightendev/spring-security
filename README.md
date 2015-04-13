@@ -17,6 +17,10 @@
 ## Reference
 articles
 - http://beletsky.net/2013/11/simple-authentication-in-angular-dot-js-app.html
+- http://www.baeldung.com/spring_redirect_after_login
+
+secure rest api
+- 
 
 angular-oauth on github
 - http://andreareginato.github.io/oauth-ng/

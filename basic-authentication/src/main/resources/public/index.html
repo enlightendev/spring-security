@@ -16,12 +16,13 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" ng-controller="home" ng-cloak class="ng-cloak">
         <h1>Greetings</h1>
-        <div ng-controller="home" ng-cloak class="ng-cloak">
+        <div>
             <p>The ID is {{greeting.id}}</p>
             <p>The content is {{greeting.content}}</p>
         </div>
+        <button ng-click="newGreeting()">New Greeting</button>
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -30,11 +31,18 @@
 <script>
 
 
-    angular.module('MainApp', []).controller('home', function($scope, $http) {
-        $http.get('/resource/').success(function(data) {
-            $scope.greeting = data;
+    angular.module('MainApp', [])
+        .controller('home', function($scope, $http) {
+
+            $scope.newGreeting = function(){
+                $http.get('/resource/').success(function(data) {
+                    $scope.greeting = data;
+                });
+            };
+
+            $scope.newGreeting();
         })
-    });
+        ;
 
 </script>
 </body>

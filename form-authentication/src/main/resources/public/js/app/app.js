@@ -78,14 +78,17 @@ angular.module('MainApp', ['ngRoute'])
 
     .controller('home', function ($rootScope, $scope, $http) {
 
+        $scope.newGreeting = function(){
+            $http.get('/api/resource/').success(function(data) {
+                $scope.greeting = data;
+            });
+        };
         /**
          * this call
          */
         if($rootScope.authenticated){
 
-            $http.get('/api/resource/').success(function (data) {
-                $scope.greeting = data;
-            });
+            $scope.newGreeting();
 
         };
     });

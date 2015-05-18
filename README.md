@@ -1,4 +1,4 @@
-##About
+## About
 
 1 - basic-authentication
 
@@ -14,12 +14,19 @@
 
 
 
-##reference
+## Reference
 articles
 - http://beletsky.net/2013/11/simple-authentication-in-angular-dot-js-app.html
+- http://www.baeldung.com/spring_redirect_after_login
+
+secure rest api
+- 
 
 angular-oauth on github
 - http://andreareginato.github.io/oauth-ng/
 - https://github.com/angular-oauth/angular-oauth
 
-- rails oauth2 provider: https://github.com/doorkeeper-gem/doorkeeper
+
+## TODO
+- replace default user stores with custom user/authorities tables
+- robust logging.

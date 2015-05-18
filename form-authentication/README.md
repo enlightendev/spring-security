@@ -1,7 +1,7 @@
 ## About
 
-Showing form based authentication instead of basic http authentication. 
-In this app we include our own custom login form
+Showing form based authentication instead of basic http authentication. In this app we include our own custom login
+form
 
 Front end app and server side are served from the same server process. Future versions are saved from separate
 processes.

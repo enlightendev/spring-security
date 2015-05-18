@@ -1,0 +1,49 @@
+buildscript {
+  dependencies {
+    classpath('org.springframework.boot:spring-boot-gradle-plugin:1.2.0.M1')
+  }
+  repositories {
+    mavenLocal()	
+    mavenCentral()
+    maven {url 'http://repo.spring.io/milestone'}
+    maven {url 'http://repo.spring.io/release'}
+    maven {url 'http://repo.spring.io/snapshot'}
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+// applicationDefaultJvmArgs = ["-Dserver.port=8080", "-Dserver.host=0.0.0.0", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=7000"]
+
+jar {
+  baseName = 'token-auth-ex'
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+}
+
+repositories {
+  mavenLocal()	
+  mavenCentral()
+  maven {url 'http://repo.spring.io/milestone'}
+  maven {url 'http://repo.spring.io/release'}
+  maven {url 'http://repo.spring.io/snapshot'}
+}
+
+dependencies {
+  compile('org.springframework.boot:spring-boot-autoconfigure')
+  compile('org.springframework.boot:spring-boot-starter-web')
+  compile('org.springframework.boot:spring-boot-starter-data-jpa')
+  compile('org.springframework.boot:spring-boot-starter-security')
+  compile('org.hibernate:hibernate-validator')
+
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+
+  runtime('com.h2database:h2')
+
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.3'
+}

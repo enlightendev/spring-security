@@ -1,0 +1,43 @@
+group 'com.philafin.samples'
+version '0.0.1'
+
+buildscript {
+    ext {
+        springBootVersion = '1.2.3.RELEASE'
+        oauthVersion = '2.0.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'idea'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'com.philafin.samples.extjwt.Application'
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+//    compile("org.springframework.boot:spring-boot-starter-security")
+//    compile("org.springframework.security.oauth:spring-security-oauth2:${oauthVersion}")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+

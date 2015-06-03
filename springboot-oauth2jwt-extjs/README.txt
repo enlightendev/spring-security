@@ -8,6 +8,9 @@
 # TODO
 
 * Roles in token response and change Ext JS view
+* Ext JS session timeout
+  * Check whether timeout extends whenever a request is sent to server (or timeout is from the time of login)
+
 
 
 

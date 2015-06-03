@@ -19,11 +19,5 @@ Ext.define('ExtJwt.Application', {
         var isAuthenticated = localStorage.getItem("isAuthenticated");
 
         Ext.widget(isAuthenticated == "true" ? 'mainview' : 'login');
-
-        ExtJwt.config = {
-            SERVICE_ENDPOINT: "http://localhost:8080/",
-            OAUTH_ENDPOINT: "http://localhost:8080/oauth/token",
-            OAUTH_BASIC_AUTH: btoa("springboot-oauth2jwt:secret")
-        };
     }
 });

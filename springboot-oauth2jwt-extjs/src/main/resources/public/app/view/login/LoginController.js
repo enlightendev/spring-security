@@ -7,9 +7,9 @@ Ext.define('ExtJwt.view.login.LoginController', {
             scope: this,
             method: "POST",
 
-            url: ExtJwt.config.OAUTH_ENDPOINT,
+            url: app.config.OAUTH_ENDPOINT,
             headers: {
-                "Authorization": "Basic " + ExtJwt.config.OAUTH_BASIC_AUTH
+                "Authorization": "Basic " + app.config.OAUTH_BASIC_AUTH
             },
             params: this.getReferences().form.getValues(),
             success: this.onLoginSuccess,

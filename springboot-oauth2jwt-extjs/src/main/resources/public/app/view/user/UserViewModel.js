@@ -9,7 +9,7 @@ Ext.define('ExtJwt.view.user.UserViewModel', {
             proxy: {
                 type: 'ajax',
                 api: {
-                    read: ExtJwt.config.SERVICE_ENDPOINT + 'api/user/list'
+                    read: app.config.SERVICE_ENDPOINT + 'api/user/list'
                 },
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('access_token')

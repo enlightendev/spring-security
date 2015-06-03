@@ -11,9 +11,7 @@ Ext.define('ExtJwt.view.user.UserViewModel', {
                 api: {
                     read: app.config.SERVICE_ENDPOINT + 'api/user/list'
                 },
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('access_token')
-                },
+
                 reader: {
                     type: 'json',
                     headers: {'Accept': 'application/json'}

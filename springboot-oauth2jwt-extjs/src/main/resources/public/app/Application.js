@@ -18,6 +18,17 @@ Ext.define('ExtJwt.Application', {
     launch: function () {
         var isAuthenticated = localStorage.getItem("isAuthenticated");
 
+        Ext.Ajax.on('beforerequest', globalInterceptor);
+
         Ext.widget(isAuthenticated == "true" ? 'mainview' : 'login');
     }
 });
+
+function globalInterceptor(conn, options, eOpts) {
+    console.log(arguments);
+    if (localStorage.getItem('isAuthenticated') == "true") {
+        if (!options.headers) options.headers = {};
+        options.headers.Authorization = 'Bearer ' + localStorage.getItem('access_token');
+    }
+    console.log("Test interceptor");
+}

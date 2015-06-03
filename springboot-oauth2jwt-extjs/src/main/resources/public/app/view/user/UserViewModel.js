@@ -1,4 +1,4 @@
-Ext.define('ExtJwt.view.UserViewModel', {
+Ext.define('ExtJwt.view.user.UserViewModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.userviewmodel',
 
@@ -9,10 +9,10 @@ Ext.define('ExtJwt.view.UserViewModel', {
             proxy: {
                 type: 'ajax',
                 api: {
-                    read: 'http://localhost:8080/api/user/list'
+                    read: ExtJwt.config.SERVICE_ENDPOINT + 'api/user/list'
                 },
                 headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('user-token')
+                    'Authorization': 'Bearer ' + localStorage.getItem('access_token')
                 },
                 reader: {
                     type: 'json',

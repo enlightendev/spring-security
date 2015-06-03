@@ -1,9 +1,9 @@
-Ext.define('ExtJwt.view.UserView', {
+Ext.define('ExtJwt.view.user.UserView', {
     extend: 'Ext.grid.Panel',
     alias: 'widget.userview',
     reference: 'caseGridRef',
 
-    requires: ['ExtJwt.view.UserViewModel'],
+    requires: ['ExtJwt.view.user.UserViewModel'],
 
     viewModel: {
         type: 'userviewmodel'

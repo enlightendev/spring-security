@@ -42,7 +42,7 @@ public class AuthorizationServerConfiguration extends
         clients
             .inMemory()
                 .withClient(Constants.RESOURCE_ID)
-                    .authorizedGrantTypes("password", "authorization_code", "refresh_token", "implicit")
+                    .authorizedGrantTypes("password", "refresh_token", "implicit")
                     .authorities("USER")
                     .scopes("read", "write")
                     .resourceIds(Constants.RESOURCE_ID)

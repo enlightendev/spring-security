@@ -1,0 +1,53 @@
+<script language="JavaScript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+
+<script>
+    var token = undefined;
+
+    $(document).ready(function () {
+        authenticate();
+    });
+
+    function authenticate() {
+        $.ajax({
+            url: "http://localhost:8080/oauth/token",
+            method: "POST",
+            headers: {
+                "Authorization": "Basic " + btoa("springboot-oauth2jwt:secret")
+            },
+            crossDomain: true,
+            async: false,
+            cache: false,
+            data: {
+                "grant_type": "password",
+                "username": "admin",
+                "password": "admin"
+            },
+            success: function (data) {
+                token = data.access_token;
+                retrieveCases();
+            },
+            error: function () {
+                console.log("authorization failed");
+            }
+        });
+    }
+
+    function retrieveCases() {
+        if (token) {
+            $.ajax({
+                url: "http://localhost:8080/api/user/list",
+                headers: {
+                    "Authorization": "Bearer " + token
+                },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function () {
+                    console.log("retrieve failed");
+                }
+            });
+        } else {
+            console.log("List user :: Not logged in");
+        }
+    }
+</script>

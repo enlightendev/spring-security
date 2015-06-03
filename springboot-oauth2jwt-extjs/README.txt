@@ -19,6 +19,11 @@
 * Get a copy of ExtJS 5.1.1 and place it under resources/public/lib/ext-5.1.1
 * Refer public/index.html for specifics
 
+ext-5.1.1\build\ext-all-debug.js
+ext-5.1.1\build\packages\ext-theme-classic\build\ext-theme-classic-debug.js
+ext-5.1.1\build\packages\ext-theme-classic\build\resources\ext-theme-classic-all-debug.css
+ext-5.1.1\build\packages\ext-theme-classic\build\resources\images (folder)
+
 
 
 # Running application

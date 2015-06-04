@@ -20,9 +20,7 @@ public class OAuth2OptionsFix extends WebSecurityConfigurerAdapter {
         // @formatter:off
         http
             .requestMatchers().antMatchers(HttpMethod.OPTIONS, "/oauth/token", "/api/**")
-            .and().csrf().disable()
-            .authorizeRequests().anyRequest().permitAll()
-            .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .and().authorizeRequests().anyRequest().permitAll();
         // @formatter:on
     }
 }

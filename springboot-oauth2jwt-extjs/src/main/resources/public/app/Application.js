@@ -25,10 +25,8 @@ Ext.define('ExtJwt.Application', {
 });
 
 function globalInterceptor(conn, options, eOpts) {
-    console.log(arguments);
     if (localStorage.getItem('isAuthenticated') == "true") {
         if (!options.headers) options.headers = {};
         options.headers.Authorization = 'Bearer ' + localStorage.getItem('access_token');
     }
-    console.log("Test interceptor");
 }

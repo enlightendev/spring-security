@@ -10,8 +10,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 
 @Configuration
 @EnableResourceServer
-public class ResourceServerConfiguration extends
-        ResourceServerConfigurerAdapter {
+public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
@@ -28,8 +27,6 @@ public class ResourceServerConfiguration extends
             .csrf().disable()
             .authorizeRequests()
                 .antMatchers("/api/**").authenticated()
-                .and().formLogin()
-                .and().httpBasic()
             .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         // @formatter:on
     }

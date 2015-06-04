@@ -20,7 +20,7 @@ Ext.define('ExtJwt.view.MainView', {
         }],
 
         tbar: ['->', {
-            text: 'logout',
+            text: 'Logout',
             listeners: {
                 click: 'onLogoutClick'
             }

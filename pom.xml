@@ -27,6 +27,7 @@
         <module>oauth2-rest-service</module>
         <module>angular-split/resource</module>
         <module>angular-split/ui</module>
+        <module>springboot-oauth2jwt-extjs</module>
     </modules>
 
     <developers>

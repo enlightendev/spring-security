@@ -1,10 +1,7 @@
 ## About
 
-Showing form based authentication instead of basic http authentication. In this app we include our own custom login
-form
-
-Front end app and server side are served from the same server process. Future versions are saved from separate
-processes.
+Statefull authentication showing form based authentication instead of basic http authentication. 
+In this app we include our own custom login form. Front end app and server side are served from the same server process. 
 
 ## Security
 
@@ -28,20 +25,5 @@ Thus we have only one user configured using application.yml
 
 - served directly from public folder
 
-
-
-
-##
-
-- our static content is in resources/public.
-
-        @Override
-        public void configure(WebSecurity web) throws Exception {
-            super.configure(web);
-
-            web
-                    .ignoring()
-                    .antMatchers("/bootstrap-3-dist/**", "/app/**");
-        }
 
 

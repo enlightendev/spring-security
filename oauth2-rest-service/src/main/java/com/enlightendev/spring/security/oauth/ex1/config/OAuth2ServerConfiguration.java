@@ -46,7 +46,7 @@ public class OAuth2ServerConfiguration {
         private TokenStore tokenStore = new InMemoryTokenStore();
 
         @Autowired
-        @Qualifier("authenticationManagerBean")
+        //@Qualifier("authenticationManagerBean")
         private AuthenticationManager authenticationManager;
 
         @Override

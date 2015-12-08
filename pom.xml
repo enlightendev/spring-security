@@ -22,7 +22,6 @@
 
     <modules>
         <module>basic-authentication</module>
-        <module>authserver</module>
         <module>form-authentication</module>
         <module>oauth2-rest-service</module>
         <module>angular-split/resource</module>

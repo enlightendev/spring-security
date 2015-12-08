@@ -1,5 +1,7 @@
 ## About
 
+[ ![Codeship Status for enlightendev/spring-security](https://codeship.com/projects/e3211fc0-08cd-0133-09a1-5a7148fc22cf/status?branch=master)](https://codeship.com/projects/90408) 
+
 1 - basic-authentication
 
 2 - form-authentication
